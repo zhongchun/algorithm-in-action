@@ -9,6 +9,8 @@
  */
 package com.bermaker.algorithms.test;
 
+import org.junit.Test;
+
 import com.bermaker.algorithms.maximumsubarray.MaximumSubArray;
 import com.bermaker.algorithms.maximumsubarray.MsaRet;
 
@@ -21,7 +23,8 @@ import com.bermaker.algorithms.maximumsubarray.MsaRet;
  */
 public class MaximumSubArrayTest {
 
-    public static void main(String[] args) {
+    @Test
+    public void testSubArray() {
         int[] A = { 3, -4, 2, 4, -1, 5, 3, -6, 2, 1, -2 };
         MaximumSubArray msa = new MaximumSubArray();
         MsaRet ret = msa.findMaxSubArray(A, 0, A.length - 1);
