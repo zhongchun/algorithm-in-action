@@ -1,5 +1,9 @@
 package com.bermaker.algorithms.maximumsubarray;
 
+/**
+ * @desc:
+ * @author:
+ */
 public class MaximumSubArray {
 
     /**
