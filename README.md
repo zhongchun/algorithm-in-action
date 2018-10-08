@@ -1,3 +1,3 @@
 # README
-Some basic algorithms.
+Some basic algorithms of leetcode.
 
