@@ -1,4 +1,4 @@
-package com.bermaker.algorithms.test;
+package com.bermaker.test;
 
 import org.junit.Test;
 

@@ -1,13 +1,13 @@
 /**
  * Copyright (C) 2018 Baidu, Inc. All Rights Reserved.
  * @Title: MaximumSubArrayTest.java
- * @Package: com.bermaker.algorithms.test
+ * @Package: com.bermaker.test
  * @Desc: maximum sub array algorithm
  * @author: yuzhongchun
  * @date: 2018年9月10日 下午6:11:25
  * @version 1.0
  */
-package com.bermaker.algorithms.test;
+package com.bermaker.test;
 
 import org.junit.Test;
 
