@@ -33,4 +33,5 @@ public class MaxAreaText {
         max = maxArea.maxArea1(height);
         System.out.println("max1: " + max);
     }
+
 }
