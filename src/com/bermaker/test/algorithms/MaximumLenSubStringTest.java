@@ -1,13 +1,7 @@
-/**
- * Copyright (C) 2018 Baidu, Inc. All Rights Reserved.
- * @Title: MaximumLenSubStringTest.java
- * @Package: com.bermaker.test
- * @Desc: TODO
- * @author: yuzhongchun
- * @date: 2018年9月11日 下午4:33:19
- * @version 1.0
+/*
+ * Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
  */
-package com.bermaker.test;
+package com.bermaker.test.algorithms;
 
 import org.junit.Test;
 

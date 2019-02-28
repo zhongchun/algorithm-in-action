@@ -1,7 +1,7 @@
 /*
- * Copyright (C) 2018 Baidu, Inc. All Rights Reserved.
+ * Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
  */
-package com.bermaker.test;
+package com.bermaker.test.algorithms;
 
 import com.bermaker.algorithms.palindromenumber.PalindromeNumber;
 import org.junit.Test;

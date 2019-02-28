@@ -1,4 +1,7 @@
-package com.bermaker.test;
+/*
+ * Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
+ */
+package com.bermaker.test.algorithms;
 
 import org.junit.Test;
 

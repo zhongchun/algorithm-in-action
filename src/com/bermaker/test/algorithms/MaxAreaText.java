@@ -1,12 +1,12 @@
 /*
  * Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
  */
-package com.bermaker.test;
+package com.bermaker.test.algorithms;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import com.dragon.bermaker.algorithm.MaxArea;
+import com.bermaker.algorithms.MaxArea;
 
 /**
  * @ClassName: MaxAreaText
@@ -30,5 +30,7 @@ public class MaxAreaText {
         int[] height = {1, 8, 6, 2, 5, 4, 8, 3, 7};
         int max = maxArea.maxArea(height);
         System.out.println("max: " + max);
+        max = maxArea.maxArea1(height);
+        System.out.println("max1: " + max);
     }
 }

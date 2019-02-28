@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
  */
-package com.dragon.bermaker.algorithm;
+package com.bermaker.algorithms;
 
 /**
  * @ClassName: MaxArea
@@ -32,6 +32,31 @@ public class MaxArea {
                 area = h * w;
                 max = (max < area) ? area : max;
             }
+        }
+        return max;
+    }
+
+    public int maxArea1(int[] height) {
+        if (height == null || height.length < 2) {
+            return 0;
+        }
+        int max = 0;
+        int area = 0;
+        int h = 0;
+        int w = 0;
+        int l = 0;
+        int r = height.length - 1;
+        while (l < r) {
+            w = r - l;
+            if (height[l] < height[r]) {
+                h = height[l];
+                l++;
+            } else {
+                h = height[r];
+                r--;
+            }
+            area = h * w;
+            max = (max < area) ? area : max;
         }
         return max;
     }
