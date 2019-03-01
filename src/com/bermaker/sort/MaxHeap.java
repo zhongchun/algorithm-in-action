@@ -8,7 +8,7 @@ package com.bermaker.sort;
 public class MaxHeap {
 
     int[] heap;
-    
+
     int heapsize;
 
     /**
