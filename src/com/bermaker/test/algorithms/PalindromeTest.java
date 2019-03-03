@@ -39,4 +39,11 @@ public class PalindromeTest {
         String ps = palindrome.longestPalindrome(s);
         System.out.println(ps);
     }
+
+    @Test
+    public void testLongestPalindrome1() {
+        String s = "babad";
+        String ps = palindrome.longestPalindrome1(s);
+        System.out.println(ps);
+    }
 }

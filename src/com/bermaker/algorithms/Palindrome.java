@@ -17,7 +17,6 @@ public class Palindrome {
      * 判断是否是回文数
      *
      * @param str
-     *
      * @return
      */
     public boolean isPn(char[] str) {
@@ -37,7 +36,6 @@ public class Palindrome {
      * 最小切分数
      *
      * @param s
-     *
      * @return
      */
     public int minCut(String s) {
@@ -64,7 +62,6 @@ public class Palindrome {
      * 判断是否是回文数
      *
      * @param s
-     *
      * @return
      */
     public boolean isPalindrome(String s) {
@@ -99,7 +96,8 @@ public class Palindrome {
         if (s == null || s.length() < 1) {
             return "";
         }
-        int start = 0, end = 0;
+        int start = 0;
+        int end = 0;
         for (int i = 0; i < s.length(); i++) {
             int len1 = expandAroundCenter(s, i, i);
             int len2 = expandAroundCenter(s, i, i + 1);
@@ -120,5 +118,49 @@ public class Palindrome {
         }
         return R - L - 1;
     }
+
+    /**
+     * 动态规划
+     *
+     * @param s
+     * @return
+     */
+    public String longestPalindrome1(String s) {
+        //  长度为1，返回当前串
+        if (s.length() == 1) {
+            return s;
+        }
+        //长度为2并且两个字符相等则返回
+        if (s.length() == 2 && s.charAt(0) == s.charAt(1)) {
+            return s;
+        }
+        //用于标记isLongestPalindrome[j][i]即从j到i是否是回文串；
+        //如isLongestPalindrome[1][5]＝＝true则表示字符串索引位置从1到5的子串是回文串。
+        boolean[][] isLongestPalindrome = new boolean[s.length()][s.length()];
+        //最长回文串初始最大为0
+        int maxlen = 0;
+        //对应的maxlen的开始索引位置
+        int beginIndex = 0;
+        //对应的maxlen的结束索引位置
+        int lastIndex = 0;
+        for (int i = 0; i < s.length(); i++) {
+            int j = i;
+            while (j >= 0) {
+                //满足上述的第三个条件，即当前s.charAt(i)==s.charAt(j)并
+                //且s[j＋1到i－1]也是回文串
+                if (s.charAt(i) == s.charAt(j) && (i - j < 2 || isLongestPalindrome[j + 1][i - 1])) {
+                    isLongestPalindrome[j][i] = true;
+                    if (maxlen < i - j + 1) {
+                        beginIndex = j;
+                        lastIndex = i + 1;
+                        maxlen = i - j + 1;
+                    }
+                }
+                j--;
+            }
+        }
+        return s.substring(beginIndex, lastIndex);
+    }
+
 
 }
