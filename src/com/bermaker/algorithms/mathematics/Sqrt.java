@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
  */
-package com.bermaker.algorithms;
+package com.bermaker.algorithms.mathematics;
 
 /**
  * @ClassName: Sqrt

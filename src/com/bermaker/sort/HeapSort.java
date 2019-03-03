@@ -1,8 +1,19 @@
 /*
- * Copyright (C) 2018 Baidu, Inc. All Rights Reserved.
+ * Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
  */
 package com.bermaker.sort;
 
+/**
+ * @ClassName: HeapSort
+ * @Project: dragon-wing
+ * @Description:
+ *      max-heapify: 维护最大堆性质的关键
+ *      build-max-heap：从无序的输入数据数组中构造一个最大堆
+ *      heapsort：对一个数组进行原址排序
+ * @Author: yuzhongchun
+ * @Date: 2019/2/26 11:47 AM
+ * @Version: 1.0
+ */
 public class HeapSort {
 
     private int[] A;
@@ -63,13 +74,14 @@ public class HeapSort {
 
     public void print() {
         for (int i = 0; i < A.length; i++) {
-            System.out.println(A[i]);
+            System.out.print(A[i] + " ");
         }
+        System.out.println();
     }
 
     public static void main(String[] args) {
         // int[] A = { 3, 8, 6, 14, 2, 1 };
-        int[] A = { 13, 8, 5, 7, 6, 14, 2, 1, 19 };
+        int[] A = {13, 8, 5, 7, 6, 14, 2, 1, 19};
         HeapSort hs = new HeapSort(A);
         hs.heapsort();
         hs.print();

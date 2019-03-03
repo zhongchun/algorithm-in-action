@@ -5,7 +5,7 @@ package com.bermaker.test.algorithms;
 
 import org.junit.Test;
 
-import com.bermaker.algorithms.Palindrome;
+import com.bermaker.algorithms.palindromenumber.Palindrome;
 
 /**
  * @ClassName: PalindromeTest

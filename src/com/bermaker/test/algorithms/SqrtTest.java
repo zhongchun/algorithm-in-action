@@ -5,7 +5,7 @@ package com.bermaker.test.algorithms;
 
 import org.junit.Test;
 
-import com.bermaker.algorithms.Sqrt;
+import com.bermaker.algorithms.mathematics.Sqrt;
 
 /**
  * @ClassName: SqrtTest

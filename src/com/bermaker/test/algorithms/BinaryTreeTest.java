@@ -3,61 +3,54 @@
  */
 package com.bermaker.test.algorithms;
 
-import org.junit.Before;
+import com.bermaker.algorithms.binarytree.BinaryTree;
+import com.bermaker.algorithms.binarytree.TreeNode;
 import org.junit.Test;
 
-import com.bermaker.algorithms.BinaryTree;
-import com.bermaker.algorithms.TreeNode;
+import java.util.LinkedList;
 
-/**
- * @ClassName: BinaryTreeTest
- * @Project: dragon-wing
- * @Description: TODO
- * @Author: yuzhongchun
- * @Date: 2019/2/28 11:59 AM
- * @Version: 1.0
- */
 public class BinaryTreeTest {
 
-    private BinaryTree<Character> binaryTree;
+    private BinaryTree bt = new BinaryTree();
 
-    private TreeNode<Character> root;
+    private LinkedList<Integer> linkedList = new LinkedList<>();
 
-    @Before
-    public void constructBinaryTree() {
-        binaryTree = new BinaryTree<>();
-        root = new TreeNode<>('A');
-        TreeNode<Character> t1 = new TreeNode<>('B');
-        TreeNode<Character> t2 = new TreeNode<>('C');
-        TreeNode<Character> t3 = new TreeNode<>('D');
-        TreeNode<Character> t4 = new TreeNode<>('E');
-        TreeNode<Character> t5 = new TreeNode<>('F');
+    /**
+     * Tree like this;
+     *          A
+     *       B     C
+     *     D  E  F  G
+     *   H  I   J    K
+     */
+    @Test
+    public void testPrintLayer() {
+        TreeNode root = new TreeNode('A');
+        TreeNode t1 = new TreeNode('B');
+        TreeNode t2 = new TreeNode('C');
+        TreeNode t3 = new TreeNode('D');
+        TreeNode t4 = new TreeNode('E');
+        TreeNode t5 = new TreeNode('F');
+        TreeNode t6 = new TreeNode('G');
+        TreeNode t7 = new TreeNode('H');
+        TreeNode t8 = new TreeNode('I');
+        TreeNode t9 = new TreeNode('J');
+        TreeNode t10 = new TreeNode('K');
         root.setLeft(t1);
         root.setRight(t2);
         t1.setLeft(t3);
         t1.setRight(t4);
-        t3.setLeft(t5);
-    }
+        t2.setLeft(t5);
+        t2.setRight(t6);
+        t3.setLeft(t7);
+        t3.setRight(t8);
+        t5.setLeft(t9);
+        t6.setRight(t10);
 
-    @Test
-    public void testPreOrder() {
-        binaryTree.preOrder(root);
+        bt.printLayer(root);
         System.out.println();
-        binaryTree.preOrderStack(root);
-    }
-
-    @Test
-    public void testInOrder() {
-        binaryTree.inOrder(root);
+        bt.printLayerln(root);
         System.out.println();
-        binaryTree.inOrderStack(root);
-    }
-
-    @Test
-    public void testPostOrder() {
-        binaryTree.postOrder(root);
-        System.out.println();
-        binaryTree.postOrderStack(root);
+        bt.printLayerlnd(root);
     }
 
 }

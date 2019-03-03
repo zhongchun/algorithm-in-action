@@ -1,12 +1,10 @@
 /*
  * Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
  */
-package com.bermaker.algorithms;
+package com.bermaker.algorithms.lists;
 
 import java.util.HashSet;
 import java.util.Set;
-
-import com.bermaker.algorithms.ListNode;
 
 /**
  * @ClassName: ListJoin

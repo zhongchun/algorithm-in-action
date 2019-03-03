@@ -6,7 +6,7 @@ package com.bermaker.test.algorithms;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.bermaker.algorithms.MaxArea;
+import com.bermaker.algorithms.maxarea.MaxArea;
 
 /**
  * @ClassName: MaxAreaText
