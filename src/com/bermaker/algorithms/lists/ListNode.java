@@ -13,12 +13,12 @@ package com.bermaker.algorithms.lists;
  */
 public class ListNode {
 
-    int val;
+    public int val;
 
-    ListNode next;
+    public ListNode next;
 
     public ListNode(int val) {
         this.val = val;
-        next = null;
+        this.next = null;
     }
 }
