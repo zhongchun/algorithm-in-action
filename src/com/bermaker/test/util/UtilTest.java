@@ -3,7 +3,10 @@
  */
 package com.bermaker.test.util;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 
 import org.junit.Before;
 
@@ -19,9 +22,15 @@ public class UtilTest {
 
     private HashMap<String, String> hashMap;
 
+    private ArrayList<String> arrayList;
+
+    private LinkedList<String> linkedList;
+
     @Before
     public void init() {
         hashMap = new HashMap<>();
+        arrayList = new ArrayList<>();
+        linkedList = new LinkedList<>();
     }
 
 }
