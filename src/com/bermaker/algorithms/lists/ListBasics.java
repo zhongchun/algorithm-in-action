@@ -192,7 +192,7 @@ public class ListBasics {
         }
         ListNode slow = head;
         ListNode fast = head;
-        while(fast.next !=null && fast.next.next != null) {
+        while (fast.next != null && fast.next.next != null) {
             slow = slow.next;
             fast = fast.next.next;
             if (slow == fast) {
@@ -246,8 +246,9 @@ public class ListBasics {
 
     /**
      * 给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
-     *
-     * 解题思路：分两个步骤
+     * <p>
+     * 解题思路：快每次走两步，慢指针每次走一步，有环必相遇；相遇后慢指针单步走，快指针从头单步走，再次相遇点为环起始点
+     * 分两个步骤
      * 首先通过快慢指针的方法判断链表是否有环；
      * 接下来如果有环，则寻找入环的第一个节点。
      * 具体的方法为:
@@ -258,6 +259,7 @@ public class ListBasics {
      * 但是a的值是不知道的，解决思路是曲线救国，注意到起点到A的长度是a，
      * 那么可以用一个从起点开始的新指针q和从节点B开始的慢指针p
      * 同步走，相遇的地方必然是入环的第一个节点A。 文字有点绕，画个图就一目了然了~~
+     *
      * @param head
      *
      * @return
