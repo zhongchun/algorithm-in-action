@@ -1,12 +1,12 @@
 /*
  * Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
  */
-package com.bermaker.algorithms.mathematics;
+package com.bermaker.algorithms.arrays;
 
 import java.util.List;
 
 /**
- * @ClassName: TreeSum
+ * @ClassName: ThreeSum
  * @Project: dragon-wing
  * @Description: TODO
  * @Author: yuzhongchun
@@ -24,9 +24,10 @@ import java.util.List;
  *   [-1, -1, 2]
  * ]
  */
-public class TreeSum {
+public class ThreeSum {
 
     public List<List<Integer>> threeSum(int[] nums) {
+
 
         return null;
     }
