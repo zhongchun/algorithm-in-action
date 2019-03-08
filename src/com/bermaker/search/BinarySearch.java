@@ -91,4 +91,114 @@ public class BinarySearch {
         return pos;
     }
 
+    /**
+     * 给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。
+     * 如果目标值不存在于数组中，返回它将会被按顺序插入的位置。
+     * <p>
+     * 你可以假设数组中无重复元素。
+     * <p>
+     * 示例 1:
+     * <p>
+     * 输入: [1,3,5,6], 5
+     * 输出: 2
+     * 示例 2:
+     * <p>
+     * 输入: [1,3,5,6], 2
+     * 输出: 1
+     * 示例 3:
+     * <p>
+     * 输入: [1,3,5,6], 7
+     * 输出: 4
+     * 示例 4:
+     * <p>
+     * 输入: [1,3,5,6], 0
+     * 输出: 0
+     * <p>
+     * 线性查找，时间复杂度 O(n)
+     *
+     * @param nums
+     * @param target
+     *
+     * @return
+     */
+    public int searchInsert(int[] nums, int target) {
+        // 不考虑数组数null和数组为空的情况
+        int i = 0;
+        //        for (; i < nums.length; i++) {
+        //            if (target <= nums[i]) {
+        //                return i;
+        //            }
+        //        }
+        while (i < nums.length) {
+            if (target <= nums[i]) {
+                return i;
+            }
+            i++;
+        }
+        return i;
+    }
+
+    /**
+     * 二分查找，时间复杂度 O(logn)
+     *
+     * @param nums
+     * @param target
+     *
+     * @return
+     */
+    public int searchInsert1(int[] nums, int target) {
+        int pos = 0;
+        int l = 0;
+        int r = nums.length - 1;
+        int m = (l + r) / 2;
+        while (l <= r) {
+            if (nums[m] < target) {
+                l = m + 1;
+                m = (l + r) / 2;
+            } else if (nums[m] > target) {
+                r = m - 1;
+                m = (l + r) / 2;
+            } else {
+                pos = m;
+                break;
+            }
+        }
+        if (l > r) {
+            pos = l;
+        }
+        return pos;
+    }
+
+    /**
+     * 实现 int sqrt(int x) 函数。
+     * <p>
+     * 计算并返回 x 的平方根，其中 x 是非负整数。
+     * <p>
+     * 由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。
+     * <p>
+     * 示例 1:
+     * <p>
+     * 输入: 4
+     * 输出: 2
+     * 示例 2:
+     * <p>
+     * 输入: 8
+     * 输出: 2
+     * 说明: 8 的平方根是 2.82842...,
+     * 由于返回类型是整数，小数部分将被舍去。
+     *
+     * @param x
+     *
+     * @return
+     */
+    public int mySqrt(int x) {
+        int sqrt = 0;
+        float l = 0;
+        float r = x;
+        
+
+
+        return sqrt;
+    }
+
 }

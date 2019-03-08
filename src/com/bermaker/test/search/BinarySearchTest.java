@@ -66,4 +66,9 @@ public class BinarySearchTest {
         Assert.assertEquals(-1, pos);
     }
 
+    @Test
+    public void testSearchInsert() {
+
+    }
+
 }
