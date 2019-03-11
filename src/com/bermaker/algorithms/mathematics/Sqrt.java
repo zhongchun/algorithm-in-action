@@ -14,7 +14,34 @@ package com.bermaker.algorithms.mathematics;
 public class Sqrt {
 
     /**
+     * 平方根：返回整数
+     *
+     * @param x
+     *
+     * @return
+     */
+    public int mySqrt(int x) {
+        if (x < 2) {
+            return x;
+        }
+        long lo = 0, hi = x;
+        while (lo < hi) {
+            long mid = (lo + hi) >> 1;
+            long tmp = mid * mid;
+            if (x < tmp) {
+                hi = mid - 1;
+            } else if (x > tmp) {
+                lo = mid + 1;
+            } else {
+                return (int) mid;
+            }
+        }
+        return lo * lo <= x ? (int) lo : (int) lo - 1;
+    }
+
+    /**
      * 二分法求解
+     *
      * @param num
      *
      * @return
@@ -43,7 +70,9 @@ public class Sqrt {
      * 牛顿迭代法
      * x1 = (x0 + n/x0)/2
      * n是要开根号的数
+     *
      * @param num
+     *
      * @return
      */
     public float sqrtN(int num) {

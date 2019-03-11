@@ -195,7 +195,7 @@ public class BinarySearch {
         int sqrt = 0;
         float l = 0;
         float r = x;
-        
+
 
 
         return sqrt;
